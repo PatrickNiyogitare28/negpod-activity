@@ -10,4 +10,13 @@ while true; do
     echo "4. Update student record"
     echo "5. Exit"
     read -p "Please enter your choice (1/2/3/4/5): " choice
-
+case $choice in
+        1)
+            read -p "Enter student email: " email
+            read -p "Enter student age: " age
+            read -p "Enter student ID: " student_id
+            echo "$email, $age, $student_id" >> "$students_file"
+            echo "Student record created and saved."
+            ;;
+esac
+done
