@@ -50,7 +50,7 @@ case $choice in
 	       fi
             ;;
 	     4)
-	    read -p "Enetr ID to update: " update_id
+	    read -p "Enter ID to update: " update_id
 	     if grep -q ", $update_id$" "$students_file"; then
                 read -p "Enter updated email: " new_email
                 read -p "Enter updated age: " new_age
