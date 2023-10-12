@@ -17,6 +17,7 @@ case $choice in
             read -p "Enter student email: " email
             read -p "Enter student age: " age
             read -p "Enter student ID: " student_id
+	    if [[ $email =~ ^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$ ]]; then
             if grep -q ", $student_id$" "$students_file"; then
                 echo "Student with ID $student_id already exists. Please enter a unique ID."
             else
@@ -24,6 +25,9 @@ case $choice in
                 echo "$email, $age, $student_id" >> "$students_file"
                 echo "Student record created and saved."
 	    fi
+	    else
+                echo "Invalid email format. Please enter a valid email address."
+		fi
             ;;
 	  2)
             if [ -s "$students_file" ]; then
