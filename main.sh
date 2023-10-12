@@ -23,6 +23,7 @@ case $choice in
                 # If the ID is not found, add the student record
                 echo "$email, $age, $student_id" >> "$students_file"
                 echo "Student record created and saved."
+	    fi
             ;;
 	  2)
             if [ -s "$students_file" ]; then
