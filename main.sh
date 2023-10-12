@@ -15,9 +15,11 @@ while true; do
 case $choice in
         1)
             read -p "Enter student email: " email
+	    #checking if the email inserted is valid
 	    if [[ $email =~ ^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$ ]]; then
             read -p "Enter student age: " age
             read -p "Enter student ID: " student_id
+	    #checking if ID is unique
             if grep -q ", $student_id$" "$students_file"; then
                 echo "Student with ID $student_id already exists. Please enter a unique ID."
             else
@@ -30,6 +32,7 @@ case $choice in
 		fi
             ;;
 	  2)
+		  #checking if the file exists and is not empty
             if [ -s "$students_file" ]; then
                 cat "$students_file"
             else
@@ -38,6 +41,7 @@ case $choice in
             ;;
 	     3)
 	       read -p "Enter student ID to delete: " delete_id
+	       #checking if ID exists
 	       if grep -q ", $delete_id$" "$students_file"; then
             sed -i "/, $delete_id$/d" "$students_file"
             echo "Student with ID $delete_id deleted."
