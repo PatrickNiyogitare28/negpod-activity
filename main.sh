@@ -17,8 +17,12 @@ case $choice in
             read -p "Enter student email: " email
             read -p "Enter student age: " age
             read -p "Enter student ID: " student_id
-            echo "$email, $age, $student_id" >> "$students_file"
-            echo "Student record created and saved."
+            if grep -q ", $student_id$" "$students_file"; then
+                echo "Student with ID $student_id already exists. Please enter a unique ID."
+            else
+                # If the ID is not found, add the student record
+                echo "$email, $age, $student_id" >> "$students_file"
+                echo "Student record created and saved."
             ;;
 	  2)
             if [ -s "$students_file" ]; then
