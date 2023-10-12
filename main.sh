@@ -18,5 +18,12 @@ case $choice in
             echo "$email, $age, $student_id" >> "$students_file"
             echo "Student record created and saved."
             ;;
+	  2)
+            if [ -s "$students_file" ]; then
+                cat "$students_file"
+            else
+                echo "No students found."
+            fi
+            ;;
 esac
 done
