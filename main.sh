@@ -34,5 +34,16 @@ case $choice in
 	    echo "ID not found"
 	       fi
             ;;
+	     4)
+	    read -p "Enetr ID to update: " update_id
+	     if grep -q ", $update_id$" "$students_file"; then
+                read -p "Enter updated email: " new_email
+                read -p "Enter updated age: " new_age
+                sed -i "s/.*$update_id$/$new_email, $new_age, $update_id/" "$students_file"
+                echo "Student record updated."
+            else
+                echo "Student with ID $update_id not found."
+            fi
+            ;;
 esac
 done
