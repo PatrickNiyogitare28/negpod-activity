@@ -3,6 +3,7 @@
 students_file="students-list_0923.txt"
 
 while true; do
+	echo "--------------------------------------------------------"
     echo "Welcome to the ALU Student Registration System"
     echo "1. Create student record"
     echo "2. View all students"
