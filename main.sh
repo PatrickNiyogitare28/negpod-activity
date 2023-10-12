@@ -45,5 +45,10 @@ case $choice in
                 echo "Student with ID $update_id not found."
             fi
             ;;
+    5)
+	    echo "Exiting the App"
+	    exit ;;
+    *)
+	    echo "Invalid Choice"
 esac
 done
