@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#specifying input file
 students_file="students-list_0923.txt"
 #creating the file student-emails.txt
 output_file="student-emails.txt"
