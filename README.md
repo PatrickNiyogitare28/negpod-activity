@@ -2,7 +2,7 @@
 
 ## Student registration system
 
-This repository contains an application that registers students' details into the ALU registration system. The application takes user input and loads and builds the Bachelor of Software Engineering cohort list of students. The inputs the application takes are the following information (student email, age, and student ID).
+This repository contains an application that registers students' details into the ALU registration system. The application takes user input and loads and builds the Bachelor of Software Engineering cohort list of students. The inputs the application alows the user to enter the following informations (student email, age, and student ID).
 
 # How to run the application
 
