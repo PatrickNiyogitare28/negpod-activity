@@ -16,7 +16,7 @@ git clone https://github.com/N-Ghi/Group7_gcs-2.git
 cd repository-name/
 ```
 
-3. **Navigate to negpod directory**:
+3. **Navigate to negpod_7-q1 directory**:
 ```bash
 cd negpod_7-q1/
 ```
@@ -28,7 +28,7 @@ cd negpod_7-q1/
 
 Choose the option to suit your intended action from 1 to 5
 
-5. **Get email list of students**:
+5. **Get an email list of students**:
 ```bash
 ./select-emails.sh
 ```
@@ -43,5 +43,5 @@ Now the application is running successfully.
 5. Divine Nubuhoro
 6. Philbert Nshimyimana
 
-# This is the end of the project description
+**This is the end of the project description**
 
