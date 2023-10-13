@@ -6,3 +6,5 @@ if [ ! -d "$directory" ]; then
 fi
 
 mv main.sh students-list_0923.txt select-emails.sh student-emails.txt "$directory"
+
+echo "files moved successfully"
