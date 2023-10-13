@@ -1,4 +1,4 @@
-
+#registration application for student
 students_file="students-list_0923.txt"
 
 while true; do
