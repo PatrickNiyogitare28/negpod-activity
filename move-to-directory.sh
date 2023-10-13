@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#moving file into another location
 directory="negpod_7-q1"
 
 if [ ! -d "$directory" ]; then
