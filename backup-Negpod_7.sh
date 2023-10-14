@@ -15,4 +15,4 @@ scp -r "$backup_dir" "$remote_server:$remote_dir"
 #Remove the backup from our sandbox
 rm -r "$backup_dir"
 
-echo "The directory has bee
+echo "The directory has been backed up"
