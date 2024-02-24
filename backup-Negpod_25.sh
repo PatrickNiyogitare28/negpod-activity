@@ -7,12 +7,15 @@ remote_password="0d4f455f95a16c9a2bb7"
 remote_directory="/summative/1023-2024j"
 local_directory="negpod_25-q1"
 
+# Full path to rsync executable
+rsync_cmd="/usr/bin/rsync"
+
 # Function to execute the backup
 perform_backup() {
     echo "Starting backup..."
 
     # Use rsync to securely copy files to the remote server
-    rsync -avz -e "sshpass -p $remote_password ssh -o StrictHostKeyChecking=no" "$local_directory" "$remote_username@$remote_host:$remote_directory"
+    "$rsync_cmd" -avz -e "sshpass -p $remote_password ssh -o StrictHostKeyChecking=no" "$local_directory" "$remote_username@$remote_host:$remote_directory"
 
     # Check if rsync command was successful
     if [ $? -eq 0 ]; then
